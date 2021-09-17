@@ -1,0 +1,105 @@
+html {
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+  'Lucida Sans', Arial, sans-serif;
+}
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button{
+outline: none;
+}
+input{
+line-height: normal;
+}
+label,
+button{
+cursor: pointer;
+}
+a {
+text-decoration: none;
+}
+img {
+display: block;
+max-width: 100%;
+}
+
+body {
+  background: 
+  linear-gradient(
+  -135deg,
+  #c850c0, 
+  #4158d0
+  );
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 520px;
+  min-height: 600px;
+  background: #161a2b;
+  text-align: center;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.title-text {
+  position: absolute;
+  top: 20px;
+  left: 110px;
+  font-size: 21px;
+  color: #fff;
+}
+
+.form-input {
+  position: absolute;
+  top: 80px;
+  left: 60px;
+}
+
+input.todo-input {
+  padding: 14px 32px 14px 16px;
+  width: 320px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  background: transparent;
+  transition: all 2s ease;
+}
+
+input.todo-input:hover {
+  border: 2px solid #7d0688;
+}
+
+input.todo-input:focus {
+  color: #fff;
+}
+
+input.todo-input::placeholder {
+  color: #e2e2e2;
+}
+
+.btn-submit {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
