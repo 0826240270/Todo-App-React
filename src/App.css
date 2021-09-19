@@ -34,44 +34,48 @@ max-width: 100%;
 body {
   background: 
   linear-gradient(
-  -135deg,
+  270deg,
   #c850c0, 
   #4158d0
   );
+  height: 100vh;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 520px;
-  min-height: 600px;
+  min-height: 650px;
   background: #161a2b;
   text-align: center;
   margin: 50px auto;
   border-radius: 10px;
   padding-bottom: 15px;
-  position: relative;
 }
 
 .title-text {
-  position: absolute;
+  margin-top: 45px;
   top: 20px;
   left: 110px;
-  font-size: 21px;
+  font-size: 20px;
   color: #fff;
 }
 
 .form-input {
-  position: absolute;
+  margin-top: 25px;
   top: 80px;
   left: 60px;
 }
 
+.input-work {
+  display: flex;
+  margin-left: 73.5px;
+}
+
 input.todo-input {
-  padding: 14px 32px 14px 16px;
-  width: 320px;
-  border-radius: 4px 0 0 4px;
+  padding: 14px 30px 14px 16px;
+  width: 300px;
+  border-radius: 5px 0 0 5px;
   border: 2px solid #5d0cff;
   outline: none;
   background: transparent;
@@ -80,6 +84,7 @@ input.todo-input {
 
 input.todo-input:hover {
   border: 2px solid #7d0688;
+  border-right: none;
 }
 
 input.todo-input:focus {
@@ -102,4 +107,20 @@ input.todo-input::placeholder {
   );
   color: #fff;
   text-transform: capitalize;
+}
+
+@media only screen and (min-width: 414px) and (max-width: 720px) {
+  .App {
+    width: 350px;
+  }
+  .form-input {
+    display: flex;
+  }
+  input.todo-input {
+    width: 240px;
+    margin-left: 20px;
+  }
+  .input-work {
+    margin-left: 0;
+  }
 }
