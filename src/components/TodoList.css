@@ -1,47 +1,108 @@
 .todo-list {
-    padding-top: 15px;
+    width: 90%;
+    margin: 17px 20px 8px 26px;
+    cursor: pointer;
+    transition: width 0.3s ease-in-out;
 }
 
 .todo-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0px 15px 0px;
+    padding: 12px 0px 12px 0px;
     border-radius: 6px 6px 6px 6px;
     outline: none;
-    background: linear-gradient(
-        90deg,
-        rgba(20, 159, 255, 1) 0%,
-        rgba(17, 122, 255, 1) 100%
-      );
 }
 
-.todo-row:nth-child(4n + 1) {
+.todo-list:hover {
+    width: 485px;
+}
+
+.todo-complete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0px 12px 0px;
+    border-radius: 6px 6px 6px 6px;
+    outline: none;
+    opacity: 0.6;
+}
+
+.row-0 {
+    background: linear-gradient(
+    90deg,
+    rgba(255, 12, 241, 1) 0%,
+    rgba(250, 0, 135, 1) 100%
+  );
+}
+  
+.row-1 {
+    background: linear-gradient(
+    90deg,
+    rgba(255, 118, 20, 1) 0%,
+    rgba(255, 84, 17, 1) 100%
+  );
+}
+  
+.row-2 {
+    background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+}  
+
+.row-3 {
     background: linear-gradient(
       90deg,
       rgba(93, 12, 255, 1) 0%,
       rgba(155, 0, 250, 1) 100%
     );
 }
-  
-.todo-row:nth-child(4n + 2) {
-background: linear-gradient(
+
+.row-4 {
+    background: linear-gradient(
     90deg,
     rgba(255, 12, 241, 1) 0%,
     rgba(250, 0, 135, 1) 100%
-);
+  );
 }
   
-.todo-row:nth-child(4n + 3) {
-background: linear-gradient(
+.row-5 {
+    background: linear-gradient(
+    90deg,
+    rgba(255, 118, 20, 1) 0%,
+    rgba(255, 84, 17, 1) 100%
+  );
+}
+  
+.row-6 {
+    background: linear-gradient(
     90deg,
     rgba(20, 159, 255, 1) 0%,
     rgba(17, 122, 255, 1) 100%
-);
+  );
 }  
 
+.row-7 {
+    background: linear-gradient(
+      90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgba(155, 0, 250, 1) 100%
+    );
+}
+
+.row-8 {
+    background: linear-gradient(
+    90deg,
+    rgba(255, 12, 241, 1) 0%,
+    rgba(250, 0, 135, 1) 100%
+  );
+}
+
+
 .title-work {    
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     cursor: pointer;
     padding-left: 14px;
@@ -59,3 +120,4 @@ background: linear-gradient(
 .check-icon {
     margin-right: -10px;
 }
+

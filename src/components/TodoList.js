@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { CgPlayListRemove, CgPlayListCheck } from 'react-icons/cg'
+import { IoIosClose, IoIosCheckmark } from 'react-icons/io'
 import './TodoList.css'
 
 const styleIcon = { 
     display: "block",
     color: "white", 
-    fontSize: "25px",
     cursor: "pointer"
 };
 
@@ -15,19 +14,20 @@ export default class TodoList extends Component {
         const { item, removeClick , doneClick } = this.props;
         return (
             <div className="todo-list">
-                <div className="todo-row">
+                <div className={ !item.is_complete ? "todo-row row-" + this.props.index.toString() :"todo-row row-" + this.props.index.toString() +  " todo-complete" }>
                     <div className="title-work">
                         <span>{item.title}</span>
-                    </div>
+                    </div>  
                     <div className="icon">
                         <div className="remove-icon">
-                            <CgPlayListRemove 
+                            <IoIosClose 
                                 style={styleIcon}   
                                 onClick={removeClick} 
+                                size={30}
                             />
                         </div>
                         <div className="check-icon">
-                            <CgPlayListCheck style={styleIcon} onClick={doneClick}/>
+                            <IoIosCheckmark style={styleIcon} size={30} onClick={doneClick} />
                         </div>
                     </div>
                 </div>
