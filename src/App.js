@@ -7,11 +7,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       title: '',
-      todoList: [
-        { id: Math.floor(Math.random() * 100), title: 'Learn React', is_complete: false },
-        { id: Math.floor(Math.random() * 100), title: 'Do CSS', is_complete: false },
-        { id: Math.floor(Math.random() * 100), title: 'Coding Javascript', is_complete: false }
-      ],
+      todoList: [],
     }
   }
 
@@ -35,7 +31,7 @@ export default class App extends React.Component {
         }
         return item;
       })
-      this.setState({
+      this.setState ({
         todoList: is_complete_Work
       })
     }
@@ -43,26 +39,55 @@ export default class App extends React.Component {
 
   handleChange = (e) => {
     let title = e.target.value;
-    this.setState({
+    this.setState ({
       title: title
     })
   }
 
-  handleKeyUp = (e) => {
+  handleKeyUp = e => {
     let { todoList } = this.state;
     let context = e.target.value;
     let newToDo = {
-      id: Math.floor(Math.random() * 100),
+      id: Math.floor(Math.random() * 1000),
       title: context,
       is_complete: false
     };
     if(e.keyCode === 13) {
-      todoList.unshift(newToDo);
-      this.setState({
-        todoList: todoList
-      })
+      if (todoList.length < 9) {
+        todoList.unshift(newToDo);
+        this.setState ({
+          title: '',
+          todoList: todoList
+        })
+      }
+      else {
+        window.alert('Làm xong hết chưa mà nhập tiếp ? Làm xong nốt đi rồi mở khóa cho nhập tiếp'); 
+        e.preventDefault();
+      }
     }
   }
+
+  submit = e => {
+    let { title, todoList }  = this.state;
+    let newToDo = {
+      id: Math.floor(Math.random() * 1000),
+      title: title,
+      is_complete: false
+    }
+    if (e) {
+      if (todoList.length < 9) {
+        todoList.unshift(newToDo);
+        this.setState({
+          title: '',
+          todoList: todoList
+        })    
+      } else {
+        window.alert('Làm xong hết chưa mà nhập tiếp ? Làm xong nốt đi rồi mở khóa cho nhập tiếp !'); 
+        e.preventDefault();
+      }
+    }
+  }
+
   render() {
     const { todoList, title } = this.state
     return (
@@ -73,14 +98,17 @@ export default class App extends React.Component {
             </h3>
           </div>
           <div className="form-input">
-            <input type="text" value={title} className="todo-input" placeholder="Coding..." 
-            onChange={this.handleChange} onKeyUp={this.handleKeyUp}
-            />
-            <button type="submit" 
-            className="btn btn-submit" 
-            >
-              Submit 
-            </button>
+            <div className="input-work">
+              <input type="text" value={title} className="todo-input" placeholder="Coding..." 
+              onChange={this.handleChange} onKeyUp={this.handleKeyUp}
+              />
+              <button type="submit" 
+              className="btn btn-submit"
+              onClick={this.submit}
+              >
+                Submit 
+              </button>       
+            </div>
             {/* Component Todo - List */}
             {
               todoList.length && todoList.map((item, index) => {
