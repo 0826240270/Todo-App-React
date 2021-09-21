@@ -14,7 +14,7 @@ export default class TodoList extends Component {
         const { item, removeClick , doneClick } = this.props;
         return (
             <div className="todo-list">
-                <div className={ !item.is_complete ? "todo-row row-" + this.props.index.toString() :"todo-row row-" + this.props.index.toString() +  " todo-complete" }>
+                <div className={ !item.is_complete ? "todo-row row-" + this.props.index.toString() :"todo-row row-" + this.props.index.toString() + " todo-complete" }>
                     <div className="title-work">
                         <span>{item.title}</span>
                     </div>  

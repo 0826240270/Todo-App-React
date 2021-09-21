@@ -6,7 +6,7 @@ import './App.css';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.idleTimer = null
     this.handleOnAction = this.handleOnAction.bind(this)
     this.handleOnActive = this.handleOnActive.bind(this)
@@ -143,7 +143,7 @@ export default class App extends React.Component {
   }
 
   handleOnIdle (event) {
-    window.alert("Có vẻ bạn đang chờ một điều gì đấy! Hãy cho tôi biết khi nào bạn đã sẵn sàng ")
+    window.alert("Có vẻ bạn đang chờ một điều gì đấy! Hãy cho tôi biết khi nào bạn đã sẵn sàng nhé")
   }
   render() {
     const { todoList, title } = this.state
