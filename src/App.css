@@ -63,8 +63,6 @@ body {
 
 .form-input {
   margin-top: 25px;
-  top: 80px;
-  left: 60px;
 }
 
 .input-work {
@@ -115,6 +113,7 @@ input.todo-input::placeholder {
   }
   .form-input {
     display: flex;
+    flex-direction: column;
   }
   input.todo-input {
     width: 240px;
