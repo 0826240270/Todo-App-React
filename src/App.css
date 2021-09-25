@@ -121,11 +121,11 @@ input.todo-input::placeholder {
   }
 
   .input-work {
-    margin-left: 10px;
+    margin-left: 12px;
   }
 
   input.todo-input {
-    width: 190px;
+    width: 175px;
   }
 
   .title-text {
@@ -150,7 +150,7 @@ input.todo-input::placeholder {
   }
 
   .input-work {
-    margin-left: 26px;
+    margin-left: 20px;
   }
 
   input.todo-input {
