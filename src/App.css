@@ -107,7 +107,88 @@ input.todo-input::placeholder {
   text-transform: capitalize;
 }
 
-@media only screen and (min-width: 414px) and (max-width: 720px) {
+ /* Responsive for Iphone 5/SE device */
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .App {
+    margin-top: 30px;
+    width: 280px;
+    min-height: 500px;
+    margin-left: 21px;
+  }
+
+  .title-text {
+    font-size: 15px;
+  }
+
+  .input-work {
+    margin-left: 10px;
+  }
+
+  input.todo-input {
+    width: 190px;
+  }
+
+  .title-text {
+    margin-top: 25px;
+  }
+
+  .form-input {
+    margin-top: 13px;
+  }
+}
+
+/* Responsive for Iphone 6/7/8 device */
+@media only screen and (min-width: 375px) and (max-width: 414px) {
+  .App {
+    margin-top: 30px;
+    width: 330px;
+    min-height: 550px;
+  }
+
+  .title-text {
+    font-size: 15px;
+  }
+
+  .input-work {
+    margin-left: 26px;
+  }
+
+  input.todo-input {
+    width: 210px;
+  }
+
+  .title-text {
+    margin-top: 25px;
+  }
+}
+
+/* Responsive for Iphone 6/7/8 and Iphone X plus device */
+@media only screen and (min-width: 414px) and (max-width: 514px) {
+  .App {
+    margin-top: 30px;
+    width: 330px;
+    min-height: 550px;
+  }
+
+  .title-text {
+    font-size: 15px;
+  }
+
+  .input-work {
+    margin-left: 26px;
+  }
+
+  input.todo-input {
+    width: 210px;
+  }
+
+  .title-text {
+    margin-top: 25px;
+  }
+}
+
+/* Responsive for another screen inch */
+@media only screen and (min-width: 515px) and (max-width: 660px) {
   .App {
     width: 350px;
   }
