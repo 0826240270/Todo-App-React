@@ -100,7 +100,6 @@
   );
 }
 
-
 .title-work {    
     font-size: 18px;
     color: #fff;
@@ -121,7 +120,7 @@
     margin-right: -10px;
 }
 
-@media only screen and (min-width: 414px) and (max-width: 720px) {
+@media only screen and (min-width: 515px) and (max-width: 720px) {
    .todo-list {
      margin: 12px 15px 4px 20px;
    }
