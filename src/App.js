@@ -38,7 +38,7 @@ export default class App extends React.Component {
   }
 
   removeWork = (item) => {
-    return (event) => {
+    return () => {
       const { todoList } = this.state;
       let index = todoList.indexOf(item)
       todoList.splice(index, 1);
@@ -54,7 +54,7 @@ export default class App extends React.Component {
   }
 
   doneWork = (item) => {
-    return (event) => {
+    return () => {
       const { todoList } = this.state;
       let is_complete_Work = todoList.filter((val) => {
         if (val.id === item.id) {
@@ -88,7 +88,7 @@ export default class App extends React.Component {
         title: context,
         is_complete: false
       };
-      if (this.state.title.length === 0) {
+      if (this.state.title.trim().length === 0) {
         e.preventDefault();
       } else {
           if (todoList.length < 9) {
@@ -116,7 +116,8 @@ export default class App extends React.Component {
       title: title,
       is_complete: false
     }
-    if (e && this.state.title.length === 0) {
+
+    if (e && this.state.title.trim().length === 0) {
       e.preventDefault();
     } else {
       if (todoList.length < 9) {
@@ -139,12 +140,12 @@ export default class App extends React.Component {
   }
 
   handleOnActive (event) {
-    
   }
 
   handleOnIdle (event) {
     window.alert("Có vẻ bạn đang chờ một điều gì đấy! Hãy cho tôi biết khi nào bạn đã sẵn sàng nhé")
   }
+
   render() {
     const { todoList, title } = this.state
     return (
@@ -158,13 +159,16 @@ export default class App extends React.Component {
             debounce={250}
           />
           <div className="title-text">
+            <div class="icon-title">
+              <img src="https://img.icons8.com/color/48/000000/todo-list--v2.gif" width="30" height="30" alt="GIF"/>
+            </div>
             <h3>
               What's the plan for today ?
             </h3>
           </div>
           <div className="form-input">
             <div className="input-work">
-              <input type="text" value={title} className="todo-input" placeholder="Coding..." 
+              <input type="text" value={title} className="todo-input" placeholder="Type here..." 
               onChange={this.handleChange} onKeyUp={this.handleKeyUp}
               />
               <button type="submit" 
