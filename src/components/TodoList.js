@@ -9,7 +9,6 @@ const styleIcon = {
 };
 
 export default class TodoList extends Component {
-
     render() {
         const { item, removeClick , doneClick } = this.props;
         return (
