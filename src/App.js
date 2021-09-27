@@ -159,7 +159,7 @@ export default class App extends React.Component {
             debounce={250}
           />
           <div className="title-text">
-            <div class="icon-title">
+            <div className="icon-title">
               <img src="https://img.icons8.com/color/48/000000/todo-list--v2.gif" width="30" height="30" alt="GIF"/>
             </div>
             <h3>
